@@ -311,8 +311,8 @@ def reverse_list_in_place(items):
         >>> orig
         ['I', 'love', 'cookies']
     """
-
-    return []
+    
+    return items[::-1]
 
 
 def duplicates(items):
