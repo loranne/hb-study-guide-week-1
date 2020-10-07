@@ -89,6 +89,24 @@ def repeat_string(string, int):
 
     print(string * int)
 
+
+def print_sign(int):
+    """Takes in an integer and prints whether greater/less than 0."""
+
+    if int > 0:
+        print("Higher than 0")
+    elif int < 0:
+        print("Lower than 0")
+    else:
+        print("Zero")
+
+
+def is_divisible_by_three(int):
+    """Takes in an integer and returns true or false depending on whether
+    int is divisible by three"""
+
+    return int % 3 == 0 
+
 ###############################################################################
 
 # PART ONE
