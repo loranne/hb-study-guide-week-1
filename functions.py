@@ -83,6 +83,12 @@ def print_product(int1, int2):
 
     print(int1 * int2)
 
+
+def repeat_string(string, int):
+    """Takes in a string and integer (x), and prints the string x times."""
+
+    print(string * int)
+
 ###############################################################################
 
 # PART ONE
