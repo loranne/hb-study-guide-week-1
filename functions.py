@@ -64,6 +64,25 @@ PART TWO:
 
 """
 
+def hello_world():
+    """Takes no arguments. Prints greeting statement."""
+
+    print("Hello World")
+
+
+def say_hi(fullname):
+    """Takes in a name as an argument, prints a greeting containing that name.
+    """
+
+    print(f"Hi {fullname}")
+
+
+def print_product(int1, int2):
+    """Takes in two integers and multiplies them together, then prints the result.
+    """
+
+    print(int1 * int2)
+
 ###############################################################################
 
 # PART ONE
