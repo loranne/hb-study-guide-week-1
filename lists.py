@@ -83,9 +83,12 @@ def smallest_int(numbers):
         >>> smallest_int([]) is None
         True
     """
-    
+    if numbers:
+        numbers.sort()
+        return numbers[0]
 
-    return sorted(numbers[0])
+    else:
+        return None  
 
 
 def largest_int(numbers):
@@ -104,9 +107,12 @@ def largest_int(numbers):
         >>> largest_int([]) is None
         True
     """
-    numbers.sort(reverse=True)
+    if numbers:
+        numbers.sort(reverse=True)
+        return numbers[0]
 
-    return numbers[0]
+    else: 
+        return None
 
 
 def halvesies(numbers):
@@ -189,12 +195,16 @@ def mult_numbers(numbers):
         >>> mult_numbers([])
         1
     """
-
-    multiplied_nums = 0
-
-    for i in range(len(numbers)):
-        multiplied_nums = numbers[i] * numbers[i + 1]
-
+    multiplied_nums = 1
+    
+    if multiplied_nums: 
+        for i in range(len(numbers)):
+            multiplied_nums = multiplied_nums * numbers[i]
+            i += 1
+    
+    else:
+        multiplied_nums = 1
+    
     return multiplied_nums
 
 
@@ -260,10 +270,11 @@ def join_strings_with_comma(words):
         >>> join_strings_with_comma(["Pretzel"])
         'Pretzel'
     """
-    string_of_words = ""
+    string_of_words = words[0]
     
-    for i in range(len(words)):
-        string_of_words = string_of_words + words[i]
+    if len(words) > 1:
+        for i in range(1, len(words)):
+            string_of_words = string_of_words + ", " + words[i]
 
     return string_of_words
 
@@ -385,7 +396,16 @@ def find_letter_indices(words, letter):
     `None`.)
     """
 
-    return []
+    letter_indices = []
+
+    for i, word in enumerate(words):
+        if letter in word:
+            letter_indices.append(i)
+        
+        else: 
+            letter_indices.append(None)
+
+    return letter_indices
 
 
 #####################################################################
