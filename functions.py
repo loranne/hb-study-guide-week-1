@@ -112,13 +112,48 @@ def num_spaces(sentence):
     """Takes in a sentence (as a string) and returns number of spaces in that
     string."""
 
-    count = 0
+    spaces_count = 0
 
-    for i in sentence:
-        if i == " ":
-            count +=1
+    for char in sentence:
+        if char == " ":
+            spaces_count +=1
     
-    return count
+    return spaces_count
+
+
+def total_meal_price(price, tip=.15):
+    """Takes in meal price and (optionally) tip percentage (15% if not explicitly
+    given). Calculates total cost of meal including tip."""
+
+    return price + price * tip
+
+
+def sign_and_parity(int):
+    """Takes in an integer and returns whether negative or positive and even
+    or odd"""
+
+    int_sign = ""
+    int_parity = ""
+
+    if int >= 0:
+        int_sign = "Positive"
+    
+    else:
+        int_sign = "Negative"
+    
+    if int % 2 == 0:
+        int_parity = "Even"
+    
+    else:
+        int_parity = "Odd"
+    
+    return [int_sign, int_parity]
+
+sign = sign_and_parity(15)[0]
+parity = sign_and_parity(15)[1]
+
+print(sign, parity)
+
 
 ###############################################################################
 
