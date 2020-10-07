@@ -107,6 +107,19 @@ def is_divisible_by_three(int):
 
     return int % 3 == 0 
 
+
+def num_spaces(sentence):
+    """Takes in a sentence (as a string) and returns number of spaces in that
+    string."""
+
+    count = 0
+
+    for i in sentence:
+        if i == " ":
+            count +=1
+    
+    return count
+
 ###############################################################################
 
 # PART ONE
