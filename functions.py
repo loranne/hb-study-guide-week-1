@@ -155,6 +155,23 @@ parity = sign_and_parity(15)[1]
 print(sign, parity)
 
 
+def full_title(name, title="Engineer"):
+    """Takes in a name and (optionally) a job title. If no job title arg given,
+    defaults to "Engineer". Returns title and name as string."""
+
+    return f"{title} {name}"
+
+
+def write_letter(recipient_name, recipient_job, sender_name):
+
+    greeting = full_title(recipient_name, recipient_job)
+
+    print (f"Dear {greeting}, I think you are amazing! Sincerely, {sender_name}")
+
+    # Dear JOB_TITLE RECIPIENT_NAME, I think you are amazing!
+#       Sincerely, SENDER_NAME.
+
+
 ###############################################################################
 
 # PART ONE
